@@ -19,3 +19,6 @@ configuration.json
 wallet.json
 id.json
 private.py
+
+# local environment
+venv
