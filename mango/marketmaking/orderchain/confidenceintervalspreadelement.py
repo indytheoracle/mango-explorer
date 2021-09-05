@@ -53,6 +53,7 @@ class ConfidenceIntervalSpreadElement(Element):
         if price.source.supports & mango.SupportedOracleFeature.CONFIDENCE == 0:
             raise Exception(f"Price does not support confidence interval: {price}")
 
+        # This is where to bring in RSI values and change size based on params
         quote_value_to_risk = model_state.inventory.available_collateral.value * self.position_size_ratio
         position_size = quote_value_to_risk / price.mid_price
 
